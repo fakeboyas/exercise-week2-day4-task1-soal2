@@ -16,3 +16,4 @@ function tampil() {
 }
 
 button.addEventListener("click", tampil);
+console.log;

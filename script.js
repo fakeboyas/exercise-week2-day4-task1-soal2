@@ -1,14 +1,9 @@
-const validateNumber = new RegExp(/^[0-9]*$/gm);
-const validateCount = new RegExp(/^\d{10,12}$/);
-
 let button = document.getElementById("submitNum");
-let inputNum = document.getElementById("addNumber").value;
 
 function tampil() {
-    if (
-        validateNumber.test(inputNum) == true &&
-        validateCount.test(inputNum) == true
-    ) {
+    let inputNum = document.getElementById("addNumber").value;
+    const validateNumber = /^\d{10,12}$/;
+    if (inputNum.match(validateNumber)) {
         alert("Selesai");
     } else {
         alert("Harus Angka, minimal character 10 dan max 12");
@@ -16,4 +11,3 @@ function tampil() {
 }
 
 button.addEventListener("click", tampil);
-console.log;
